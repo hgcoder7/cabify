@@ -98,7 +98,7 @@ const Home = () => {
     useGSAP(function () {
         if (panelOpen) {
             gsap.to(panelRef.current, {
-                height: '70%',
+                height: '65%',
                 padding: 24
                 // opacity:1
             })
@@ -207,7 +207,7 @@ const Home = () => {
                 <LiveTracking />
             </div>
             <div className=' flex flex-col justify-end h-screen absolute top-0 w-full'>
-                <div className='h-[30%] p-6 bg-white relative'>
+                <div className='h-[35%] p-6 bg-white relative'>
                     <h5 ref={panelCloseRef} onClick={() => {
                         setPanelOpen(false)
                     }} className='absolute opacity-0 hovers:cursor right-6 top-6 text-2xl'>
@@ -262,7 +262,7 @@ const Home = () => {
                     selectVehicle={setVehicleType}
                     fare={fare} setConfirmRidePanel={setConfirmRidePanel} setVehiclePanel={setVehiclePanel} />
             </div>
-            <div ref={confirmRidePanelRef} className='fixed w-full z-10 bottom-0 translate-y-full bg-white px-3 py-6 pt-12'>
+            <div ref={confirmRidePanelRef} className='fixed w-full z-10 bottom-0 translate-y-full bg-white px-3 py-8 pt-8'>
                 <ConfirmRide
                     createRide={createRide}
                     pickup={pickup}
@@ -272,7 +272,7 @@ const Home = () => {
                     
                     setConfirmRidePanel={setConfirmRidePanel} setVehicleFound={setVehicleFound} />
             </div>
-            <div ref={vehicleFoundRef} className='fixed w-full  z-10 bottom-0 translate-y-full  bg-white px-3 py-6 pt-12'>
+            <div ref={vehicleFoundRef} className='fixed w-full  z-10 bottom-0 translate-y-full  bg-white px-3 py-3 pt-8'>
                 <LookingForDriver
                     createRide={createRide}
                     pickup={pickup}
